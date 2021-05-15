@@ -1,9 +1,9 @@
-import SearchBar from "./SearchBar";
+import SearchBar from "../components/SearchBar";
 import React, { useState, useEffect, useContext } from "react";
-import JoblyApi from "./JoblyAPI";
-import JobCard from "./JobCard";
-import Loader from "./Loader"
-import UserContext from "./userContext";
+import JoblyApi from "../JoblyAPI";
+import JobCard from "../components/JobCard";
+import Loader from "../Loader"
+import UserContext from "../userContext";
 import { Redirect } from "react-router";
 import "./Company.css"
 

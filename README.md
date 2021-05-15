@@ -2,9 +2,9 @@
 
 Jobly is a job board where job seekers can create an account for free and browse job listing, posted by companies.
 
-Jobly is a full-stack Rithm school project where students (like myself) build out both the backend RESTful API endpoints and the React front end across multiple sprints. 
+Jobly is a **full-stack** Rithm school project where students (like myself!) build out both the **Express** backend **RESTful API** endpoints and the **React** front end with **Bootstrap** across multiple sprints. 
 
-Jobly uses a PostgreSQL database without an ORM for querying. All of the job and company descriptions is mock data and not representative of any real jobs or companies.
+Jobly uses a **PostgreSQL** database without an ORM for querying. All of the job and company descriptions is mock data and not representative of any real jobs or companies.
 
 ### Login
 

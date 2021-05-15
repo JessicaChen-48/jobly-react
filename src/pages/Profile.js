@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import UserContext from "./userContext";
+import UserContext from "../userContext";
 import "./App.css"
 
 function Profile() {
