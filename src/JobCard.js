@@ -1,5 +1,6 @@
 import { useRef, useContext, useEffect, useState } from "react";
 import UserContext from "./userContext";
+import "./Company.css"
 
 function JobCard({ job }) {
   const { currentUser, applyForJob } = useContext(UserContext);
@@ -14,6 +15,7 @@ function JobCard({ job }) {
   }
 
   return (
+    <div className="all-jobs">
     <div className="card w-75 mb-3">
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
@@ -27,6 +29,7 @@ function JobCard({ job }) {
         )}
         {isApplied && <button className="btn btn-success">APPLIED</button>}
       </div>
+    </div>
     </div>
   );
 }

@@ -26,24 +26,24 @@ function CompanyList() {
   useEffect(() => {
     async function getCompanyList() {
       const companyList = await JoblyApi.getAllCompanies(searchTerm);
-      console.log("COMPANY LIST", companyList);
       setCompanies(companyList);
     }
     if (searchTerm) getCompanyList();
   }, [searchTerm]);
 
   if (!companies.length) return <div>Loading....</div>;
-  console.log("Inside companies!", token.token);
   return (
     <div>
       <div className="m-3">
         <h1>Companies</h1>
         <SearchBar addSearchTerm={addSearchTerm} />
+        <div className="all-companies">
         {companies.map((company) => (
-          <div className="col-sm-5 mt-3" key={company.handle}>
+          <div className="col-sm-8 mt-3" key={company.handle}>
             <CompanyCard company={company} />
           </div>
         ))}
+        </div>
       </div>
     </div>
   );

@@ -9,11 +9,13 @@ function CompanyDetail() {
   const { token } = useContext(UserContext);
   const { handle } = useParams();
   const [companyJobs, setCompanyJobs] = useState([]);
+  const [companyName, setCompanyName] = useState("")
 
   useEffect(() => {
     async function getCompany() {
       const companyRes = await JoblyAPI.getCompany(handle);
       setCompanyJobs(companyRes.jobs);
+      setCompanyName(companyRes.name)
     }
     getCompany();
   }, []);
@@ -21,9 +23,10 @@ function CompanyDetail() {
   if (!companyJobs.length) return <div>Loading....</div>;
 
   return (
-    <div className="company-all-jobs-container">
+    <div>
+      <h1 className="company-card-name">{companyName}</h1>
       {token && (
-        <div className="company-all-jobs">
+        <div className="all-jobs">
           {companyJobs.map((job) => (
             <JobCard job={job} key={job.id} />
           ))}
