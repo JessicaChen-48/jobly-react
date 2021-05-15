@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import CompanyCard from "./CompanyCard";
 import SearchBar from "./SearchBar";
 import UserContext from "./userContext";
-import { Redirect } from "react-router";
+import Loader from "./Loader";
 import "./Company.css"
 
 function CompanyList() {
@@ -31,7 +31,7 @@ function CompanyList() {
     if (searchTerm) getCompanyList();
   }, [searchTerm]);
 
-  if (!companies.length) return <div>Loading....</div>;
+  if (!companies.length) return <div><Loader/></div>;
   return (
     <div>
       <div className="m-3">

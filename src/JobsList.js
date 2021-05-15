@@ -2,6 +2,7 @@ import SearchBar from "./SearchBar";
 import React, { useState, useEffect, useContext } from "react";
 import JoblyApi from "./JoblyAPI";
 import JobCard from "./JobCard";
+import Loader from "./Loader"
 import UserContext from "./userContext";
 import { Redirect } from "react-router";
 import "./Company.css"
@@ -31,7 +32,7 @@ function JobsList() {
     if (searchTerm) getJobsList();
   }, [searchTerm]);
 
-  if (!jobs.length) return <div>Loading....</div>;
+  if (!jobs.length) return <div><Loader/></div>;
 
   return (
     <div className="m-3 all-jobs">
