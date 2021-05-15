@@ -35,12 +35,13 @@ function JobsList() {
   if (!jobs.length) return <div><Loader/></div>;
 
   return (
-    <div className="m-3 all-jobs">
+    <div>
+    <div className="m-3">
       {token && (
         <div>
           <h1>Jobs</h1>
-          <div className="all-jobs">
           <SearchBar addSearchTerm={addSearchTerm} />
+          <div className="all-jobs">
           {jobs.map((job) => (
             <JobCard key={job.id} job={job} />
           ))}
@@ -48,6 +49,7 @@ function JobsList() {
         </div>
       )}
       {!token && <Redirect to="/login" />}
+    </div>
     </div>
   );
 }

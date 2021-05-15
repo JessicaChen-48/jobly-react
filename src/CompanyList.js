@@ -4,6 +4,7 @@ import CompanyCard from "./CompanyCard";
 import SearchBar from "./SearchBar";
 import UserContext from "./userContext";
 import Loader from "./Loader";
+import { Redirect } from "react-router";
 import "./Company.css"
 
 function CompanyList() {
@@ -35,6 +36,8 @@ function CompanyList() {
   return (
     <div>
       <div className="m-3">
+        {token && (
+          <div>
         <h1>Companies</h1>
         <SearchBar addSearchTerm={addSearchTerm} />
         <div className="all-companies">
@@ -43,8 +46,11 @@ function CompanyList() {
             <CompanyCard company={company} />
           </div>
         ))}
+          </div>
+          </div>
+        )}
+        {!token && <Redirect to="/login"/>}
         </div>
-      </div>
     </div>
   );
 }
