@@ -25,9 +25,11 @@ Browse all companies alphabetically or search for a specific company. All compan
 
 Apply for a job either through the specific company page or through the Jobs section. The Jobs section also contains a search bar for searching through job titles.
 
+A successful application will change the red "Apply" button to a green "Applied" button, indicating that the application is housed in the database.
 
 ### Profile
 
+In the Profile section, you can edit any field except for your username (used as a primary key) and password. A correct password input is required in order for the fields to update.
 
 ### Admins
 
@@ -49,6 +51,8 @@ In addition to all of the features accessible to user account, the admin account
 * POST /users - add a new user
 * GET /users - get a list of all users
 * PATCH /users/:username/jobs/:id - update an application, including the username, jobID, and application status
+
+There is no front-end UI to perform any of these methods. To test these out, use an external API tool, like Insomnia or Postman.
 
 
 ### Shoutouts

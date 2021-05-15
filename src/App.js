@@ -53,8 +53,6 @@ function App() {
   async function applyForJob(id) {
     const jobId = await JoblyApi.applyForJob(currentUser.username, id);
 
-    console.log("curr ser", currentUser)
-
     if (currentUser.jobs) {
       setCurrentUser((currentUser) => ({
         ...currentUser,
