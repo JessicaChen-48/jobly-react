@@ -15,9 +15,8 @@ function JobCard({ job }) {
   }
 
   return (
-    <div className="all-jobs">
     <div className="card w-75 mb-3">
-      <div className="card-body">
+      <div className="card-body col-sm-8">
         <h5 className="card-title">{title}</h5>
         <h5 className="card-title">{companyName}</h5>
         <p className="card-text">Salary: {salary}</p>
@@ -29,7 +28,6 @@ function JobCard({ job }) {
         )}
         {isApplied && <button className="btn btn-success">APPLIED</button>}
       </div>
-    </div>
     </div>
   );
 }

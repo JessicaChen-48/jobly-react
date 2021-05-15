@@ -4,6 +4,7 @@ import JoblyApi from "./JoblyAPI";
 import JobCard from "./JobCard";
 import UserContext from "./userContext";
 import { Redirect } from "react-router";
+import "./Company.css"
 
 function JobsList() {
   const [jobs, setJobs] = useState([]);
@@ -33,14 +34,16 @@ function JobsList() {
   if (!jobs.length) return <div>Loading....</div>;
 
   return (
-    <div className="m-3">
+    <div className="m-3 all-jobs">
       {token && (
         <div>
           <h1>Jobs</h1>
+          <div className="all-jobs">
           <SearchBar addSearchTerm={addSearchTerm} />
           {jobs.map((job) => (
             <JobCard key={job.id} job={job} />
           ))}
+          </div>
         </div>
       )}
       {!token && <Redirect to="/login" />}
