@@ -5,9 +5,9 @@ function JobCard({ job }) {
   const { currentUser, applyForJob } = useContext(UserContext);
   const { id, title, salary, equity, companyName } = job;
   const isApplied =
-    !currentUser || !currentUser.applications
+    !currentUser || !currentUser.jobs
       ? false
-      : currentUser.applications.includes(id);
+      : currentUser.jobs.includes(id);
 
   async function handleClick(e) {
     await applyForJob(id);
@@ -19,7 +19,7 @@ function JobCard({ job }) {
         <h5 className="card-title">{title}</h5>
         <h5 className="card-title">{companyName}</h5>
         <p className="card-text">Salary: {salary}</p>
-        <p className="card-text">Equity:{equity}</p>
+        <p className="card-text">Equity: {equity}</p>
         {!isApplied && (
           <button onClick={handleClick} className="btn btn-danger">
             Apply
