@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./LoggedOut.css"
 
 function Signup({ signUp }) {
   const initialFormData = {
@@ -27,7 +28,10 @@ function Signup({ signUp }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+    <h1>Signup for Jobly</h1>
+    <div className="logged-out-form">
+    <form className="col-sm-9" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="username">Username</label>
         <input
@@ -37,7 +41,6 @@ function Signup({ signUp }) {
           id="username"
           name="username"
           value={formData.username}
-          aria-describedby="emailHelp"
           placeholder="Enter username"
         />
       </div>
@@ -94,6 +97,8 @@ function Signup({ signUp }) {
         Submit
       </button>
     </form>
+    </div>
+    </div>
   );
 }
 
