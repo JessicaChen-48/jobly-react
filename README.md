@@ -15,7 +15,7 @@ Use the above dummy account to jump right in!
 
 ### Sigup
 
-Otherwise, you can create a new account with any of your own information. Do note that the usernames gina40, testuser, and testadmin are already taken.
+Otherwise, you can create a new account with any of your own information. Do note that the usernames testuser and testadmin are already taken.
 
 ### Companies
 
