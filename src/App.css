@@ -6,3 +6,9 @@
   text-align: center;
   margin-top: 2%;
 }
+
+.profile-container {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}

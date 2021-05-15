@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "./userContext";
+import "./App.css"
 
 function Profile() {
   const { currentUser, token, updateUser } = useContext(UserContext);
@@ -27,8 +28,8 @@ function Profile() {
   }
 
   return (
-    <div className="container mt-3">
-      <form onSubmit={handleSubmit}>
+    <div className="container mt-5 profile-container">
+      <form className="col-sm-9" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">
             <b>Username</b>
