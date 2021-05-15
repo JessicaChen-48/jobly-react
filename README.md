@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Welcome to Jobly!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Jobly is a job board where job seekers can create an account for free and browse job listing, posted by companies.
 
-## Available Scripts
+Jobly is a full-stack Rithm school project where students (like myself) build out both the backend RESTful API endpoints and the React front end across multiple sprints. 
 
-In the project directory, you can run:
+Jobly uses a PostgreSQL database without an ORM for querying. All of the job and company descriptions is mock data and not representative of any real jobs or companies.
 
-### `yarn start`
+### Login
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Username: testuser
+Password: password
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Use the above dummy account to jump right in! 
 
-### `yarn test`
+### Sigup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Otherwise, you can create a new account with any of your own information. Do note that the usernames gina40, testuser, and testadmin are already taken.
 
-### `yarn build`
+### Companies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Browse all companies alphabetically or search for a specific company. All company cards are clickable and filter to show all job openings for that company.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Jobs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Apply for a job either through the specific company page or through the Jobs section. The Jobs section also contains a search bar for searching through job titles.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Profile
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Admins
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Username: testadmin
+Password: password
 
-## Learn More
+To access the admin permissions of the site, use the above username and password to login.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In addition to all of the features accessible to user account, the admin account can also:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* POST /companies - add a new company
+* PATCH /companies/:id - change details about a company, except their handle (handle is primary key)
+* DELETE /companies/:id - delete a company
 
-### Code Splitting
+* POST /jobs - add a new job listing
+* PATCH /jobs/:id - change details about a job listing, except id
+* DELETE /jobs/:id - delete a job posting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* POST /users - add a new user
+* GET /users - get a list of all users
+* PATCH /users/:username/jobs/:id - update an application, including the username, jobID, and application status
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Shoutouts
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Kevin Huang - Express collaborator
+Kat Huang - React collaborator
