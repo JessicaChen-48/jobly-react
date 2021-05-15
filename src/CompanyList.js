@@ -4,6 +4,7 @@ import CompanyCard from "./CompanyCard";
 import SearchBar from "./SearchBar";
 import UserContext from "./userContext";
 import { Redirect } from "react-router";
+import "./Company.css"
 
 function CompanyList() {
   const [companies, setCompanies] = useState([]);

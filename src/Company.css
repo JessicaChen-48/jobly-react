@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+}
+
+.my-2 {
+  justify-content: center;
+}
+
+.company-all-jobs {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2%;
+}

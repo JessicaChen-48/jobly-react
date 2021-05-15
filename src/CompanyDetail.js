@@ -3,6 +3,7 @@ import { Redirect, useParams } from "react-router-dom";
 import JoblyAPI from "./JoblyAPI";
 import JobCard from "./JobCard";
 import UserContext from "./userContext";
+import "./Company.css"
 
 function CompanyDetail() {
   const { token } = useContext(UserContext);
@@ -20,9 +21,9 @@ function CompanyDetail() {
   if (!companyJobs.length) return <div>Loading....</div>;
 
   return (
-    <div>
+    <div className="company-all-jobs-container">
       {token && (
-        <div>
+        <div className="company-all-jobs">
           {companyJobs.map((job) => (
             <JobCard job={job} key={job.id} />
           ))}
