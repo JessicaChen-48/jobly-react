@@ -52,17 +52,12 @@ function App() {
 
   async function applyForJob(id) {
     const jobId = await JoblyApi.applyForJob(currentUser.username, id);
-    console.log(currentUser)
     
     setCurrentUser((currentUser) => ({
       ...currentUser,
       jobs: [...currentUser.jobs, jobId],
     }));
   }
-
-  console.log("current user", currentUser);
-  // console.log("token", token);
-  // console.log("localstorage!", localStorage.getItem("userToken"));
 
   function logout() {
     setToken(null);
