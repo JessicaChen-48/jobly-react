@@ -11,7 +11,7 @@ function NavBar({ logout }) {
       <nav className="navbar navbar-expand-lg navbar-light bg-warning">
         <Link to="/" className="navbar-brand mr-auto">
           Jobly
-        <i class="fas fa-briefcase"></i>
+        <i className="fas fa-briefcase"></i>
         </Link>
         {token && (
           <nav className="navbar-expand navbar" id="navbarNav">
