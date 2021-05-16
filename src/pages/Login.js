@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./LoggedOut.css"
 
+/** Renders /login */
+
 function Login({ loginUser }) {
   const history = useHistory();
   const [formData, setFormData] = useState({ username: "", password: "" });

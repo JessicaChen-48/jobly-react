@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import UserContext from "./userContext";
-import "./App.css"
+import UserContext from "../userContext";
+import "../App.css"
+
+/** Renders /profile */
 
 function Profile() {
   const { currentUser, token, updateUser } = useContext(UserContext);

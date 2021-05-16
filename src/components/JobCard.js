@@ -1,5 +1,5 @@
 import { useRef, useContext, useEffect, useState } from "react";
-import UserContext from "./userContext";
+import UserContext from "../userContext";
 import "./Company.css"
 
 function JobCard({ job }) {
