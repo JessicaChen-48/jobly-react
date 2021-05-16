@@ -3,7 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Routes from "./Routes";
-import NavBar from "./NavBar";
+import NavBar from "./components/NavBar";
 import JoblyApi from "./JoblyAPI";
 import UserContext from "./userContext";
 import jwt from "jsonwebtoken";

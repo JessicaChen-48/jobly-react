@@ -1,9 +1,9 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
 import CompanyList from "./pages/CompanyList";
-import CompanyDetail from "./CompanyDetail";
+import CompanyDetail from "./components/CompanyDetail";
 import JobsList from "./pages/JobsList";
-import Login from "./Login";
+import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import { useContext } from "react";

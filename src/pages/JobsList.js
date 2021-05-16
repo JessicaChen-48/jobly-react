@@ -2,10 +2,12 @@ import SearchBar from "../components/SearchBar";
 import React, { useState, useEffect, useContext } from "react";
 import JoblyApi from "../JoblyAPI";
 import JobCard from "../components/JobCard";
-import Loader from "../Loader"
+import Loader from "../components/Loader"
 import UserContext from "../userContext";
 import { Redirect } from "react-router";
-import "./Company.css"
+import "../components/Company.css"
+
+/** Renders /jobs */
 
 function JobsList() {
   const [jobs, setJobs] = useState([]);

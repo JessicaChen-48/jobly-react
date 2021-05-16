@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./LoggedOut.css"
 
+/** Renders /signup */
+
 function Signup({ signUp }) {
   const initialFormData = {
     username: "",

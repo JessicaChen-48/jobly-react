@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
-import JoblyAPI from "./JoblyAPI";
+import JoblyAPI from "../JoblyAPI";
 import JobCard from "./JobCard";
 import Loader from "./Loader"
-import UserContext from "./userContext";
+import UserContext from "../userContext";
 import "./Company.css"
 
 function CompanyDetail() {
